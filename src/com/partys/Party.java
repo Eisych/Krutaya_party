@@ -2,24 +2,15 @@ package com.partys;
 
 public class Party {
 
-    private String name;
-    private int age;
-    private String gender;
-    private String profession;
+    private Human matvey = new Human("Matvey", 23, "male", "broker");
+    private Human nikita = new Human("Nikita", 38, "male", "Java-backend developer");
+    private Human katya = new Human("Katya", 23, "female", "A17");
 
-    public Party (String name, int age, String gender, String profession) {
-        setValues(name, age, gender, profession);
+    @Override
+    public String toString() {
+        return
+                "matvey " + matvey +
+                "\nnikita = " + nikita +
+                "\nkatya = " + katya;
     }
-
-    public void setValues (String name, int age, String gender, String profession) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.profession = profession;
-    }
-
-    public String getValues() {
-    String info = "Имя: " + name + ". Возраст: " + age + ". Пол: " + gender + ". Профессия: " + profession;
-    return info; }
-
 }
